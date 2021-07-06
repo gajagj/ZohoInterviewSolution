@@ -2,9 +2,7 @@ function solution(word) {
     let wordlen = word.length;
     for (let j = 0; j < word.length; j++) {
         let answer = "";
-        for (let k = 0; k < word.length - j - 1; k++) {
-            answer += " "
-        }
+            answer += " ".repeat(word.length - j - 1)
         for (let i = 0; i < j + 1; i++) {
             answer += word[(parseInt(wordlen / 2 + i) % wordlen)];
         }
